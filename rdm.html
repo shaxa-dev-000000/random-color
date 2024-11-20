@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffffff;
+    }
+    
+    .kan1, .kan2, .kan3, .kan4{
+      width: 75px;
+      height: 100px;
+      background: white;
+      margin: 10px;
+      box-shadow: 5px 5px 20px black;
+      transition: all 0.5s ease;
+    }
+    
+    .color-1, .color-2, .color-3, .color-4{
+      width: 95%;
+      height: 75px;
+      background: black;
+      margin: 2px auto;
+      transition: all 0.5s ease;
+    }
+    
+    .text-1, .text-2, .text-3, .text-4{
+      width: 70px;
+      height: 10px;
+      background: transparent;
+      margin: 5px auto;
+      text-align: center;
+      color: black;
+      font-size: 10px;
+    }
+    
+    .btn{
+      position: absolute;
+      top: 70%;
+      width: 85px;
+      height: 45px;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="kan1">
+    <div class="color-1"></div>
+    <div class="text-1">#000000</div>
+  </div>
+  <div class="kan2">
+    <div class="color-2"></div>
+    <div class="text-2">#000000</div>
+  </div>
+  <div class="kan3">
+    <div class="color-3"></div>
+    <div class="text-3">#000000</div>
+  </div>
+  <div class="kan4">
+    <div class="color-4"></div>
+    <div class="text-4">#000000</div>
+  </div>
+  <button type="submit" class="btn">Click me</button>
+  
+  <script>
+    const kan1 = document.querySelector('.kan1'),
+          kan2 = document.querySelector('.kan2'),
+          kan3 = document.querySelector('.kan3'),
+          kan4 = document.querySelector('.kan4')
+    
+    const color1 = document.querySelector('.color-1'),
+          color2 = document.querySelector('.color-2'),
+          color3 = document.querySelector('.color-3'),
+          color4 = document.querySelector('.color-4')
+    
+    const text1 = document.querySelector('.text-1'       ),
+          text2 = document.querySelector('.text-2'),
+          text3 = document.querySelector('.text-3'),
+          text4 = document.querySelector('.text-4')
+
+    const button = document.querySelector('.btn')
+    
+    const param = '1234567890abcdef'
+    
+    button.addEventListener('click', ()=> {
+      x1 = Math.floor(Math.random() * 16)
+      X1 = param[x1]
+      y1 = Math.floor(Math.random() * 16)
+      Y1 = param[y1]
+      z1 = Math.floor(Math.random() * 16)
+      Z1 = param[z1]
+      a1 = Math.floor(Math.random() * 16)
+      A1 = param[a1]
+      b1 = Math.floor(Math.random() * 16)
+      B1 = param[b1]
+      c1 = Math.floor(Math.random() * 16)
+      C1 = param[c1]
+      
+      kan1.style.boxShadow = `5px 5px 20px #${X1}${Y1}${Z1}${A1}${B1}${C1}`
+      color1.style.background = `#${X1}${Y1}${Z1}${A1}${B1}${C1}`
+      text1.textContent = `#${X1}${Y1}${Z1}${A1}${B1}${C1}`
+      
+      x2 = Math.floor(Math.random() * 16)
+      X2 = param[x2]
+      y2 = Math.floor(Math.random() * 16)
+      Y2 = param[y2]
+      z2 = Math.floor(Math.random() * 16)
+      Z2 = param[z2]
+      a2 = Math.floor(Math.random() * 16)
+      A2 = param[a2]
+      b2 = Math.floor(Math.random() * 16)
+      B2 = param[b2]
+      c2 = Math.floor(Math.random() * 16)
+      C2 = param[c2]
+      
+      kan2.style.boxShadow = `5px 5px 20px #${X2}${Y2}${Z2}${A2}${B2}${C2}`
+      color2.style.background = `#${X2}${Y2}${Z2}${A2}${B2}${C2}`
+      text2.textContent = `#${X2}${Y2}${Z2}${A2}${B2}${C2}`
+      
+      x3 = Math.floor(Math.random() * 16)
+      X3 = param[x3]
+      y3 = Math.floor(Math.random() * 16)
+      Y3 = param[y3]
+      z3 = Math.floor(Math.random() * 16)
+      Z3 = param[z3]
+      a3 = Math.floor(Math.random() * 16)
+      A3 = param[a3]
+      b3 = Math.floor(Math.random() * 16)
+      B3 = param[b3]
+      c3 = Math.floor(Math.random() * 16)
+      C3 = param[c3]
+      
+      kan3.style.boxShadow = `5px 5px 20px #${X3}${Y3}${Z3}${A3}${B3}${C3}`
+      color3.style.background = `#${X3}${Y3}${Z3}${A3}${B3}${C3}`
+      text3.textContent = `#${X3}${Y3}${Z3}${A3}${B3}${C3}`
+      
+      x4 = Math.floor(Math.random() * 16)
+      X4 = param[x4]
+      y4= Math.floor(Math.random() * 16)
+      Y4 = param[y4]
+      z4 = Math.floor(Math.random() * 16)
+      Z4 = param[z4]
+      a4 = Math.floor(Math.random() * 16)
+      A4 = param[x4]
+      b4 = Math.floor(Math.random() * 16)
+      B4 = param[b4]
+      c4 = Math.floor(Math.random() * 16)
+      C4 = param[c4]
+      
+      kan4.style.boxShadow = `5px 5px 20px #${X4}${Y4}${Z4}${A4}${B4}${C4}`
+      color4.style.background = `#${X4}${Y4}${Z4}${A4}${B4}${C4}`
+      text4.textContent = `#${X4}${Y4}${Z4}${A4}${B4}${C4}`
+      
+    })
+  </script>
+  
+</body>
+</html>
